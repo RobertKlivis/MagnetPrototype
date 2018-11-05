@@ -61,7 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bridge.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
+    <Compile Include="Assets\Scripts\GameCamera.cs" />
     <Compile Include="Assets\Scripts\HeavyCar.cs" />
     <Compile Include="Assets\Scripts\LightCar.cs" />
     <Compile Include="Assets\Scripts\Magnet.cs" />
