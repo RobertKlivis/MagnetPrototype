@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 14247313}
   m_Layer: 0
   m_Name: ground2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,8 +183,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14247310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.763, y: -3.235, z: 0}
-  m_LocalScale: {x: 11.708193, y: 1.330985, z: 1}
+  m_LocalPosition: {x: 23.389, y: -3.235, z: 0}
+  m_LocalScale: {x: 10.422787, y: 1.330985, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -511,7 +511,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 8.673931
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -551,9 +551,10 @@ GameObject:
   - component: {fileID: 547189008}
   - component: {fileID: 547189010}
   - component: {fileID: 547189011}
+  - component: {fileID: 547189012}
   m_Layer: 0
   m_Name: bridge
-  m_TagString: Untagged
+  m_TagString: Bridge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,13 +611,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 547189007}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5735764, w: 0.8191521}
-  m_LocalPosition: {x: 52.69, y: 4.52, z: 0}
-  m_LocalScale: {x: 4.229588, y: 1.4405683, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.56337345, w: 0.82620245}
+  m_LocalPosition: {x: 46.08, y: 4.53, z: 0}
+  m_LocalScale: {x: 2.7360017, y: 1.3838987, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 70}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 68.579}
 --- !u!61 &547189010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -650,10 +651,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 547189007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fdb6757b39b08b4cb5f2d72add5ccea, type: 3}
+  m_Script: {fileID: 11500000, guid: 888c1aef8ad51d04eb4adf27f4a47e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Tilt: 0
+--- !u!50 &547189012
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547189007}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &661810741
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +747,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 661810741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.39, y: 2.07, z: 0}
+  m_LocalPosition: {x: -25.28, y: 2.44, z: 0}
   m_LocalScale: {x: 0.35, y: 0.342, z: 1}
   m_Children:
   - {fileID: 906921145}
@@ -788,15 +809,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 661810741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f2ab7da9d58444088beea06f7ca73e, type: 3}
+  m_Script: {fileID: 11500000, guid: 553a88d21331e304e86f447cc6af0bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 10
-  deceleration: 5
+  acceleration: 20
+  deceleration: 10
   maxSpeed: 60
   maxreverseSpeed: 30
-  Respawn: {fileID: 214210900}
+  Tilt: 0
+  Respawn: {fileID: 0}
+  Ground: {fileID: 0}
   vGravity: {x: 0, y: -9.81}
+  onGround: 0
+  useMagnet: 0
 --- !u!1 &892303117
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,8 +833,8 @@ GameObject:
   - component: {fileID: 892303122}
   - component: {fileID: 892303121}
   - component: {fileID: 892303120}
-  - component: {fileID: 892303119}
   - component: {fileID: 892303118}
+  - component: {fileID: 892303119}
   m_Layer: 0
   m_Name: Magnet2
   m_TagString: Untagged
@@ -850,7 +875,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 892303117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6cd83fa17353b04cb43a7595fac50c0, type: 3}
+  m_Script: {fileID: 11500000, guid: aa2612f0f4839794d9408bd95c170e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &892303120
@@ -865,7 +890,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16299629, y: -4.9806147}
+  m_Offset: {x: -2.8080463, y: -7.0668564}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -876,7 +901,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.499634, y: 37.29389}
+  m_Size: {x: 45.040035, y: 41.466377}
   m_EdgeRadius: 0
 --- !u!250 &892303121
 PointEffector2D:
@@ -895,7 +920,7 @@ PointEffector2D:
   m_ForceSource: 0
   m_ForceTarget: 0
   m_ForceMode: 0
-  m_Drag: 1.5
+  m_Drag: 0
   m_AngularDrag: 0
 --- !u!212 &892303122
 SpriteRenderer:
@@ -950,7 +975,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892303117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.51, y: 9.19, z: 0}
+  m_LocalPosition: {x: 45.82, y: 10.62, z: 0}
   m_LocalScale: {x: 0.58268434, y: 0.33996654, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -965,8 +990,8 @@ GameObject:
   m_Component:
   - component: {fileID: 906921145}
   - component: {fileID: 906921146}
-  - component: {fileID: 906921147}
   - component: {fileID: 906921148}
+  - component: {fileID: 906921147}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -1041,10 +1066,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 906921144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ede5959b44e5a47be5a83b0f2d8da9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3075d147572b79545a5b228745df5e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 10
+  Car: {fileID: 661810741}
 --- !u!50 &906921148
 Rigidbody2D:
   serializedVersion: 4
@@ -1281,7 +1307,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1136739962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.4, y: 10, z: 0}
+  m_LocalPosition: {x: 32.4, y: 11.38, z: 0}
   m_LocalScale: {x: 33.02088, y: 0.12264449, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1298,8 +1324,8 @@ GameObject:
   - component: {fileID: 1360538119}
   - component: {fileID: 1360538122}
   - component: {fileID: 1360538121}
-  - component: {fileID: 1360538123}
   - component: {fileID: 1360538124}
+  - component: {fileID: 1360538123}
   m_Layer: 0
   m_Name: Magnet
   m_TagString: Untagged
@@ -1360,7 +1386,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1360538118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 9.26, z: 0}
+  m_LocalPosition: {x: -0.01, y: 10.58, z: 0}
   m_LocalScale: {x: 0.58268434, y: 0.33996654, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1378,7 +1404,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0881519, y: -5.212328}
+  m_Offset: {x: -3.381527, y: -6.9265804}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1389,7 +1415,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 35.00501, y: 37.757324}
+  m_Size: {x: 42.24401, y: 41.18583}
   m_EdgeRadius: 0
 --- !u!250 &1360538122
 PointEffector2D:
@@ -1408,7 +1434,7 @@ PointEffector2D:
   m_ForceSource: 0
   m_ForceTarget: 0
   m_ForceMode: 0
-  m_Drag: 1.5
+  m_Drag: 0
   m_AngularDrag: 0
 --- !u!114 &1360538123
 MonoBehaviour:
@@ -1418,7 +1444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360538118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6cd83fa17353b04cb43a7595fac50c0, type: 3}
+  m_Script: {fileID: 11500000, guid: aa2612f0f4839794d9408bd95c170e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1360538124
@@ -1517,8 +1543,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1405903017}
   - component: {fileID: 1405903018}
-  - component: {fileID: 1405903019}
   - component: {fileID: 1405903020}
+  - component: {fileID: 1405903019}
   m_Layer: 0
   m_Name: Wheel (1)
   m_TagString: Untagged
@@ -1593,10 +1619,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405903016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ede5959b44e5a47be5a83b0f2d8da9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3075d147572b79545a5b228745df5e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 10
+  Car: {fileID: 661810741}
 --- !u!50 &1405903020
 Rigidbody2D:
   serializedVersion: 4
@@ -1629,7 +1656,7 @@ GameObject:
   - component: {fileID: 1459445865}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1730,7 +1757,7 @@ GameObject:
   - component: {fileID: 1789951483}
   m_Layer: 0
   m_Name: ground4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1813,8 +1840,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1789951482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79, y: -3.235, z: 0}
-  m_LocalScale: {x: 8.049382, y: 1.330985, z: 1}
+  m_LocalPosition: {x: 73.71, y: -3.235, z: 0}
+  m_LocalScale: {x: 10.646598, y: 1.330985, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1853,7 +1880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: 225}
+  m_AnchoredPosition: {x: -450, y: 243}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858128176
