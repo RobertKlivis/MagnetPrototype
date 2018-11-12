@@ -308,14 +308,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bridge.cs" />
+    <Compile Include="Assets\Scripts\BridgeScript.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
+    <Compile Include="Assets\Scripts\CarScript.cs" />
     <Compile Include="Assets\Scripts\GameCamera.cs" />
     <Compile Include="Assets\Scripts\HeavyCar.cs" />
     <Compile Include="Assets\Scripts\LightCar.cs" />
     <Compile Include="Assets\Scripts\Magnet.cs" />
+    <Compile Include="Assets\Scripts\MagnetScript.cs" />
     <Compile Include="Assets\Scripts\MediumCar.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Wheels.cs" />
+    <Compile Include="Assets\Scripts\WheelScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Users\cbeva\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Styles\Main_Dark.uss" />
